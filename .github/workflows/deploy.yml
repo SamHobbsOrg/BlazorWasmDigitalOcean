@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy NodeJS app
-        uses: appleboy/ssh-action@v0.1.2
+      - name: Deploy Droplet app
+        uses: appleboy/ssh-action
         with:
           host: ${{secrets.DROPLETHOSTSECRET}} # IP address of the server you wish to ssh into
           key: ${{secrets.DROPLETKEYSECRET}} # Private or public key of the server
